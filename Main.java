@@ -1,47 +1,42 @@
-import java.util.Scanner;
+// import java.util.LinkedList;
+// import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc;
-        String header, menuList;
-        int option, inNum, inSecondNum;
-        float total;
-        boolean attempt;
+// public class Main {
+//     public static void main(String[] args) {
+//         LinkedList<Patient> list = new LinkedList<>();
+//         list.add(new Patient("Mirza", "Exclusive"));
 
-        header = "Calculator\n============\nTotal = ";
-        menuList = "1. Addition\n2. Substraction\n3. Multiplication";
-        attempt = false;
-        total = 0F;
-        sc = new Scanner(System.in);
-        sc.close();
+//         // Cek kelas yang ingin dimasukkan
 
-        while (true) {
-            System.out.printf("\n%s%s\n", header, total);
+//         // Menambahkan pasien kedalam antrian
 
-            if (!attempt) {
-                attempt = true;
-                System.out.print("\nInput number : ");
-                inNum = sc.nextInt();
-            } else {
-                inNum = 0;
-            }
+//         Patient patient = new Patient(null, 1);
 
-            System.out.print(menuList);
-            System.out.print("\nOperator [1...3]: ");
-            option = sc.nextInt();
+//     }
+// }
 
-            switch (option) {
-                case 1:
-                    System.out.print("\nInput number : ");
-                    inSecondNum = sc.nextInt();
-                    total += inNum + inSecondNum;
-                break;
-                case 2:
-                    System.out.print("\nInput number : ");
-                    inSecondNum = sc.nextInt();
-                    total += inNum - inSecondNum;
-            }
-            System.out.println("===============");
-        }
-    }
-}
+// class Patient {
+//     private String name;
+//     private int service;
+
+//     public Patient(String name, int service) {
+//         this.name = name;
+//         this.service = service;
+//     }
+
+//     public String getName() {
+//         return name;
+//     }
+
+//     public void setName(String name) {
+//         this.name = name;
+//     }
+
+//     public int getService() {
+//         return service;
+//     }
+
+//     public void setService(int service) {
+//         this.service = service;
+//     }
+// }
