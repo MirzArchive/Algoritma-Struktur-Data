@@ -1,0 +1,77 @@
+package practical.assignment1;
+
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int option = sc.nextInt();
+
+        switch (option) {
+            case 1:
+                Trapezoid tr = new Trapezoid(sc.nextFloat(), sc.nextFloat(), sc.nextFloat());
+                System.out.printf("%.2f", tr.countWide());
+                break;
+            case 2:
+                Kite kt = new Kite(sc.nextFloat(), sc.nextFloat());
+                System.out.printf("%.2f", kt.countWide());
+                break;
+            case 3:
+                Circle cr = new Circle(sc.nextFloat());
+                System.out.printf("%.2f", cr.countWide());
+                break;
+            default:
+                System.out.println("Input yang Anda masukkan tidak sesuai");
+        }
+
+        sc.close();
+    }
+}
+
+class Trapezoid {
+    private float firstSide;
+    private float secondSide;
+    private float height;
+
+    public Trapezoid(float firstSide, float secondSide, float height) {
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
+        this.height = height;
+    }
+
+    public float countWide() {
+        return 0.5F * height * (firstSide + secondSide);
+    }
+}
+
+class Kite {
+    private float firstDiagonal;
+    private float secondDiagonal;
+
+    public Kite(float firstDiagonal, float secondDiagonal) {
+        this.firstDiagonal = firstDiagonal;
+        this.secondDiagonal = secondDiagonal;
+    }
+
+    public float countWide() {
+        return firstDiagonal * secondDiagonal / 2;
+    }
+}
+
+class Circle {
+    private float radius;
+    private float phi = 3.14F;
+
+    public Circle(float radius) {
+        this.radius = radius;
+    }
+
+    public float countWide() {
+        if (radius % 7 == 0) {
+            return 22 * ((radius * radius) / 7);
+        }
+
+        return phi * (radius * radius);
+    }
+}
