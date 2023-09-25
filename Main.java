@@ -1,42 +1,16 @@
-// import java.util.LinkedList;
-// import java.util.Scanner;
+import java.util.Scanner;
 
-// public class Main {
-//     public static void main(String[] args) {
-//         LinkedList<Patient> list = new LinkedList<>();
-//         list.add(new Patient("Mirza", "Exclusive"));
+public class Main {
+    public static void main(String[] args) {
+        String input = "Whole Pizza\n";
 
-//         // Cek kelas yang ingin dimasukkan
+        Scanner in = new Scanner(input);
 
-//         // Menambahkan pasien kedalam antrian
+        for (int i = 0; in.hasNext(); i++) {
+            System.out.println("Iteration: " + (i + 1));
+            System.out.println("Input: " + in.next());
+        }
 
-//         Patient patient = new Patient(null, 1);
-
-//     }
-// }
-
-// class Patient {
-//     private String name;
-//     private int service;
-
-//     public Patient(String name, int service) {
-//         this.name = name;
-//         this.service = service;
-//     }
-
-//     public String getName() {
-//         return name;
-//     }
-
-//     public void setName(String name) {
-//         this.name = name;
-//     }
-
-//     public int getService() {
-//         return service;
-//     }
-
-//     public void setService(int service) {
-//         this.service = service;
-//     }
-// }
+        in.close();
+    }
+}
