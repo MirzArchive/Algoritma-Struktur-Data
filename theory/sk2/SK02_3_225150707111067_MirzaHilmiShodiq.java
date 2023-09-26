@@ -17,7 +17,7 @@ import java.util.Stack;
  * 225150700111036
  */
 
-public class SK02_3_NIMKetua_NamaKetua {
+public class SK02_3_225150707111067_MirzaHilmiShodiq {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         StandardInput stdin = new StandardInput();
