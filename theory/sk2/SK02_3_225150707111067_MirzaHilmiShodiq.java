@@ -37,10 +37,10 @@ public class SK02_3_225150707111067_MirzaHilmiShodiq {
             switch (choice) {
                 case "1":
                     System.out.printf("\n%sRiwayat Pasien%s", Color.YELLOW, Color.RESET);
-                    if (stdin.toString().isEmpty()) {
+                    if (patient.getHistoryOfIllness() == null) {
                         System.out.print("\nRiwayat masih kosong...\n");
                     } else {
-                        System.out.printf("\n%s\n", stdin);
+                        System.out.printf("\n%s\n", patient.getHistoryOfIllness());
                     }
                     break;
                 case "2":
@@ -73,6 +73,7 @@ public class SK02_3_225150707111067_MirzaHilmiShodiq {
                         }
 
                         if (stdin.isFull()) {
+                            patient.setHistoryOfIllness(stdin.toString());
                             System.out.printf("\n%sBerhasil menyimpan data riwayat pasien%s\n", Color.GREEN_BG, Color.RESET);
                             break inputCycle;
                         }
