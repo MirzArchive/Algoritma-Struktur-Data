@@ -22,7 +22,7 @@ public class Solution2 {
                     return;
                 }
                 openingChar = stack.pop();
-                if (findCorrelatingClosing(openingChar) != chara) {
+                if (findCorrelatedClosing(openingChar) != chara) {
                     System.out.println("Salah");
                     return;
                 }
@@ -40,7 +40,7 @@ public class Solution2 {
         return false;
     }
 
-    private static char findCorrelatingClosing(char opening) {
+    private static char findCorrelatedClosing(char opening) {
         for (int i = 0; i < brackets.length; i += 2) {
             if (opening == brackets[i]) {
                 return brackets[i + 1];
