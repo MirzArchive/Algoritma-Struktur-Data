@@ -3,8 +3,6 @@
  * 225150707111067
  */
 
-package practical.assignment3;
-
 import java.util.Scanner;
 import java.util.Stack;
 

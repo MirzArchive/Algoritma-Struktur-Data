@@ -1,16 +1,12 @@
-import java.util.Scanner;
+import java.util.PriorityQueue;
 
 public class Main {
     public static void main(String[] args) {
-        String input = "Whole Pizza\n";
-
-        Scanner in = new Scanner(input);
-
-        for (int i = 0; in.hasNext(); i++) {
-            System.out.println("Iteration: " + (i + 1));
-            System.out.println("Input: " + in.next());
-        }
-
-        in.close();
+        PriorityQueue<Integer> queue = new PriorityQueue<>();
+        queue.add(5);
+        queue.add(10);
+        queue.add(50);
+        queue.add(100);
+        System.out.println(queue);
     }
 }
